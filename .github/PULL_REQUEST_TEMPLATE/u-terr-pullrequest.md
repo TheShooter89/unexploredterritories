@@ -1,6 +1,6 @@
 ---
-name: u-terr issue
-about: standard issue template
+name: u-terr pull request
+about: standard pull request template
 title: ''
 labels: feature
 assignees: ''
@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 ### description
-a simple paragraph to describe the issue
+a simple paragraph to describe the changes included in the pull request
 
 ### resources
 _none_
