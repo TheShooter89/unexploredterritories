@@ -7,15 +7,17 @@ assignees: ''
 
 ---
 
-# description
+### description
 a simple paragraph to describe the issue
 
-# resources
+### resources
+_none_
 [link to figma]()
 
-# references
+### references
+_none_
 * [Make pancakes using Rust enums]()
 > leverage `rust` enums powers to bake perfect pancakes
 
-# notes
+### notes
 _none_
