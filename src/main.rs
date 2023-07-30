@@ -72,8 +72,7 @@ fn main() {
         )
         .insert_resource(Money(100.0))
         .add_systems(Startup, setup)
-        .add_plugins(PlayerPlugin)
-        .add_plugins(PigPlugin)
+        .add_plugins((PlayerPlugin, PigPlugin))
         .run();
 }
 
