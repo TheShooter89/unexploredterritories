@@ -1,4 +1,4 @@
-use bevy::{prelude::*, render::camera::ScalingMode};
+use bevy::prelude::*;
 
 mod player;
 use player::PlayerPlugin;
@@ -6,6 +6,9 @@ use player::Money;
 
 mod pig;
 use pig::PigPlugin;
+
+mod setup;
+use setup::SetupPlugin;
 
 pub const CLEAR: Color = Color::rgb(0.1, 0.1, 0.1);
 pub const RESOLUTION: f32 = 16.0 / 9.0;
@@ -71,17 +74,6 @@ fn main() {
                 .build(),
         )
         .insert_resource(Money(100.0))
-        .add_systems(Startup, setup)
-        .add_plugins((PlayerPlugin, PigPlugin))
+        .add_plugins((SetupPlugin, PlayerPlugin, PigPlugin))
         .run();
-}
-
-fn setup(mut commands: Commands,) {
-    //commands.spawn(Camera2dBundle::default());
-    let mut camera = Camera2dBundle::default();
-    camera.projection.scaling_mode = ScalingMode::AutoMin {
-        min_width: 256.0,
-        min_height: 144.0,
-    };
-    commands.spawn(camera);
 }
