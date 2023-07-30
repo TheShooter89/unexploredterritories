@@ -1,5 +1,7 @@
 use bevy::prelude::*;
 
+mod configs;
+
 mod player;
 use player::PlayerPlugin;
 use player::Money;

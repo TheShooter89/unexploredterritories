@@ -1,5 +1,6 @@
 use bevy::{prelude::*, sprite::collide_aabb::collide};
 
+use crate::configs::POKEBALL_SPRITE_PATH;
 use crate::player::{Money, Player};
 
 #[derive(Debug, Component)]
@@ -35,7 +36,7 @@ pub fn spawn_pig(
         money.0 -= 10.0;
         info!("Spent $10 on a pig, remaining money: ${:?}", money.0);
 
-        let texture = asset_server.load("pokeball.png");
+        let texture = asset_server.load(POKEBALL_SPRITE_PATH);
 
         commands.spawn((
             SpriteBundle {

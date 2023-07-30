@@ -1,5 +1,7 @@
 use bevy::{prelude::*, sprite::collide_aabb::collide};
 
+use crate::configs::PLAYER_SPRITE_PATH;
+
 #[derive(Debug, Resource)]
 pub struct Money(pub f32);
 
@@ -21,7 +23,7 @@ impl Plugin for PlayerPlugin {
 
 pub fn spawn_player(mut commands: Commands, asset_server: Res<AssetServer>) {
     //
-    let texture = asset_server.load("player.png");
+    let texture = asset_server.load(PLAYER_SPRITE_PATH);
 
     commands.spawn((
         SpriteBundle {
