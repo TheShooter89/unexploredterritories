@@ -24,7 +24,7 @@ fn main() {
                 .set(WindowPlugin {
                     primary_window: Some(Window {
                         resolution: (640.0, 480.0).into(),
-                        title: ("unexplored territories".into()),
+                        title: (configs::APP_TITLE.into()),
                         resizable: false,
                         ..default()
                     }),
